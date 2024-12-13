@@ -46,9 +46,12 @@ fun AboutScreen(navController: NavController) {
                 expanded = expanded,
                 onDismissRequest = { expanded = false }
             ) {
+                val preferencesManager = PreferencesManager(context)
+
                 DropdownMenuItem(
                     text = { Text("English") },
                     onClick = {
+                        preferencesManager.saveLanguage("en")  // Tallenna kieli
                         activity?.let {
                             AppLocale.setLocale(it, "en")
                         }
@@ -58,6 +61,7 @@ fun AboutScreen(navController: NavController) {
                 DropdownMenuItem(
                     text = { Text("Suomi") },
                     onClick = {
+                        preferencesManager.saveLanguage("fi")  // Tallenna kieli
                         activity?.let {
                             AppLocale.setLocale(it, "fi")
                         }
