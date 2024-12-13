@@ -118,13 +118,13 @@ fun MainScreen(navController: NavController) {
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = if (weather.isEmpty()) stringResource(id = R.string.get_weather) else weather,
+                text = weather.ifEmpty { stringResource(id = R.string.get_weather) },
                 style = MaterialTheme.typography.headlineMedium
             )
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = {
                 scope.launch {
-                    preferencesManager.saveCity(city) // Tallenna viimeksi käytetty kaupunki
+                    preferencesManager.saveCity(city)
                     val result = fetchWeather(city)
                     weather = if (result != null) {
                         val tempString = String.format(Locale.getDefault(), "%.1f", result.main.temp)

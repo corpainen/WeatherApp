@@ -1,7 +1,6 @@
 package com.example.weatherapp
 
 import android.app.Activity
-import android.content.Intent
 import android.content.res.Configuration
 import android.util.Log
 import java.util.Locale

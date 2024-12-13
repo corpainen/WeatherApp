@@ -13,22 +13,18 @@ class PreferencesManager(context: Context) {
         private const val KEY_LANGUAGE = "language"
     }
 
-    // Tallenna kaupunki
     fun saveCity(city: String) {
         preferences.edit().putString(KEY_CITY, city).apply()
     }
 
-    // Hae tallennettu kaupunki
     fun getCity(): String {
         return preferences.getString(KEY_CITY, "Tampere") ?: "Tampere"
     }
 
-    // Tallenna kieli
     fun saveLanguage(language: String) {
         preferences.edit().putString(KEY_LANGUAGE, language).apply()
     }
 
-    // Hae tallennettu kieli
     fun getLanguage(): String {
         return preferences.getString(KEY_LANGUAGE, "en") ?: "en"
     }

@@ -16,7 +16,7 @@ import androidx.navigation.NavController
 @Composable
 fun AboutScreen(navController: NavController) {
     val context = LocalContext.current
-    val activity = context as? Activity // Muunnetaan Context -> Activity
+    val activity = context as? Activity
     var expanded by remember { mutableStateOf(false) }
 
     Column(
@@ -50,7 +50,7 @@ fun AboutScreen(navController: NavController) {
                     text = { Text("English") },
                     onClick = {
                         activity?.let {
-                            AppLocale.setLocale(it, "en") // Kutsutaan AppLocale oikealla Activity-parametrilla
+                            AppLocale.setLocale(it, "en")
                         }
                         expanded = false
                     }
@@ -59,7 +59,7 @@ fun AboutScreen(navController: NavController) {
                     text = { Text("Suomi") },
                     onClick = {
                         activity?.let {
-                            AppLocale.setLocale(it, "fi") // Kutsutaan AppLocale oikealla Activity-parametrilla
+                            AppLocale.setLocale(it, "fi")
                         }
                         expanded = false
                     }
