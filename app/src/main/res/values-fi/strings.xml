@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Sääsovellus</string>
+    <string name="city">Kaupunki</string>
+    <string name="get_weather">Hae sää</string>
+    <string name="about_info">Tämä sovellus näyttää säätilan käyttäen OpenWeatherMap APIa.</string>
+    <string name="visit_openweathermap">Avaa OpenWeatherMap</string>
+    <string name="select_language">Valitse kieli</string>
+    <string name="back_to_main">Takaisin pääsivulle</string>
+    <string name="weather_info">Sää %1$s: %2$s, %3$s°C</string>
+    <string name="error_message">Virhe: Sään hakeminen epäonnistui kohteelle %1$s. Syy: %2$s</string>
+</resources>
